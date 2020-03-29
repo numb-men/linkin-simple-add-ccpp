@@ -30,14 +30,14 @@ vector<string> split(const string& str, const string& delim) {
 
 int main(int argc, char *argv[]) {
 
-	char* input, * output;
-	for (int i = 0; i < argc; i++) {
-		if (strcmp(argv[i], "-input") == 0) {
-			input = argv[++i];
-		} else if (strcmp(argv[i], "-output") == 0) {
-			output = argv[++i];
-		}
-	}
+    char* input, * output;
+        for (int i = 0; i < argc; i++) {
+            if (strcmp(argv[i], "-input") == 0) {
+                input = argv[++i];
+        } else if (strcmp(argv[i], "-output") == 0) {
+            output = argv[++i];
+        }
+    }
 //	cout << input << '\n' << output << endl;
     ifstream fin;
     fin.open(input);
@@ -54,10 +54,10 @@ int main(int argc, char *argv[]) {
     fin.close();
     ofstream fout(output);
     for (vector<int>::iterator it = sums.begin(); it != sums.end(); it++) {
-        cout << *it << '\n';
+        // cout << *it << '\n';
         fout << *it << '\n';
     }
-    cout << endl;
+    // cout << endl;
     fout.close();
     // 不注释会超时
     // cin.get();
